@@ -1,5 +1,5 @@
 import { styles } from "../../constants/styles";
-import React, { useEffect, useRef } from "react";
+import  { useEffect, useRef } from "react";
 import { ComputersCanvas } from "../canvas";
 import { config } from "../../constants/config";
 import audioFile from "../../assets/background-music.mp3";
