@@ -40,9 +40,9 @@ type TConfig = {
 
 export const config: TConfig = {
   html: {
-    title: "sHel.Ai",
+    title: "ShEl.Ai",
     fullName: "Shelton Joseph",
-    email: "shelton013@gmailcom",
+    email: "sjconsulting013@gmail.com",
   },
   hero: {
     name: "Shelly",
@@ -67,11 +67,7 @@ export const config: TConfig = {
     about: {
       p: "Introduction",
       h2: "Overview.",
-      content: `I'm a skilled software developer with experience in TypeScript, 
-      JavaScript, and Python, and expertise in frameworks like React, Node.js, 
-      and GenAI RAG technology. I'm a quick learner and collaborate closely with clients to
-      create efficient, scalable, and user-friendly solutions that solve
-      real-world problems. Let's work together to bring your ideas to life!`,
+      content: `I'm a skilled software developer with extensive experience in building web applications, AI-driven websites, and generative AI solutions. I specialize in creating efficient, scalable, and user-friendly digital products that deliver real-world value. Whether you need a cutting-edge AI-powered solution or a seamless web experience, I’m here to bring your vision to life. Let’s turn your ideas into impactful results!`,
     },
     experience: {
       p: "What I have done so far",

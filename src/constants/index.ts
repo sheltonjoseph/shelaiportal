@@ -51,19 +51,19 @@ export const navLinks: TNavLink[] = [
 
 const services: TService[] = [
   {
-    title: "Full-Stack Developer",
+    title: "Web Development",
     icon: web, // Replace this with a relevant icon if available
   },
   {
-    title: "Generative AI Specialist",
+    title: "AI-Driven Sites",
     icon: mobile, // Replace with a GenAI-related icon
   },
   {
-    title: "Backend Developer",
+    title: "Generative AI",
     icon: backend,
   },
   {
-    title: "Technical Consultant",
+    title: "Software Consulting",
     icon: creator, // Replace with a consulting-related icon if available
   },
 ];
@@ -247,7 +247,7 @@ const projects: TProject[] = [
       },
     ],
     image: msstones,
-    sourceCodeLink: "https://github.com/",
+    sourceCodeLink: "https://mcstones.in/",
   },
   // {
   //   name: "Trip Guide",
