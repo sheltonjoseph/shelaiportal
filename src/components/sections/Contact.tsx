@@ -15,26 +15,26 @@ const INITIAL_STATE = Object.fromEntries(
 const emailjsConfig = {
   serviceId: import.meta.env.VITE_EMAILJS_SERVICE_ID,
   templateId: import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-  accessToken: import.meta.env.VITE_EMAILJS_ACCESS_TOKEN,
+  publicKey: import.meta.env.VITE_EMAILJS_PUBLICKEY,
 };
 
 const Contact = () => {
-  const formRef = useRef<React.LegacyRef<HTMLFormElement> | undefined>();
+  const formRef = useRef<HTMLFormElement | null>(null);
   const [form, setForm] = useState(INITIAL_STATE);
   const [loading, setLoading] = useState(false);
+  const [successMessage, setSuccessMessage] = useState("");
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement> | undefined
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
-    if (e === undefined) return;
     const { name, value } = e.target;
     setForm({ ...form, [name]: value });
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement> | undefined) => {
-    if (e === undefined) return;
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
+    setSuccessMessage("");
 
     emailjs
       .send(
@@ -47,36 +47,32 @@ const Contact = () => {
           to_email: config.html.email,
           message: form.message,
         },
-        emailjsConfig.accessToken
+        emailjsConfig.publicKey
       )
       .then(
         () => {
           setLoading(false);
-          alert("Thank you. I will get back to you as soon as possible.");
-
+          setSuccessMessage("Email Sent! Shelly will get back to you ASAP.");
           setForm(INITIAL_STATE);
+          // Clear success message after 4 seconds
+          setTimeout(() => setSuccessMessage(""), 4000);
         },
         (error) => {
           setLoading(false);
-
-          console.log(error);
+          console.error(error);
           alert("Something went wrong.");
         }
       );
   };
 
   return (
-    <div
-      className={`flex flex-col-reverse gap-10 overflow-hidden xl:mt-12 xl:flex-row`}
-    >
+    <div className="flex flex-col-reverse gap-10 overflow-hidden xl:mt-12 xl:flex-row">
       <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}
         className="bg-primary flex-[0.75] rounded-2xl p-8"
       >
         <Header useMotion={false} {...config.contact} />
-
         <form
-          // @ts-expect-error
           ref={formRef}
           onSubmit={handleSubmit}
           className="mt-12 flex flex-col gap-8"
@@ -92,7 +88,7 @@ const Contact = () => {
                 <Component
                   type={input === "email" ? "email" : "text"}
                   name={input}
-                  value={form[`${input}`]}
+                  value={form[input]}
                   onChange={handleChange}
                   placeholder={placeholder}
                   className="bg-black placeholder:text-secondary rounded-lg border-none px-6 py-4 font-medium text-white outline-none"
@@ -108,6 +104,15 @@ const Contact = () => {
             {loading ? "Sending..." : "Send"}
           </button>
         </form>
+        
+        {successMessage && (
+          <div
+            className="p-4 mt-4 text-sm text-green-800 rounded-lg bg-green-50 dark:bg-gray-800 dark:text-green-400"
+            role="alert"
+          >
+            <span className="font-medium">{successMessage}</span>
+          </div>
+        )}
       </motion.div>
 
       <motion.div
@@ -116,6 +121,7 @@ const Contact = () => {
       >
         <EarthCanvas />
       </motion.div>
+      
     </div>
   );
 };

@@ -26,7 +26,9 @@ const App = () => {
       <div className="bg-primary relative z-0">
         <div className="bg-hero-pattern bg-cover bg-center bg-no-repeat">
           <Navbar />
-          <Hero />
+          <div className="mt-0 sm:mt-0 md:mt-0 lg:mt-0 xl:mt-0 2xl:mt-4"> {/* Apply Margin */}
+        <Hero />
+      </div>
         </div>
         <div style={{ backgroundColor: "black" }}>
           <About />
