@@ -11,8 +11,13 @@ import {
   Works,
   StarsCanvas,
 } from "./components";
+import ReactGA from "react-ga";
 import { useEffect } from "react";
 import { config } from "./constants/config";
+
+const TRACKING_ID = "G-4Y0KTSMHWY";
+
+ReactGA.initialize(TRACKING_ID);
 
 const App = () => {
   useEffect(() => {
