@@ -42,7 +42,7 @@ const ComputersCanvas = () => {
           left: isMobile ? "5%" : 0, // Slight left alignment for mobile
           width: isMobile ? "90%" : "100%", // Adjust width for mobile
           height: isMobile ? "90%" : "100%", // Adjust height for mobile
-          zIndex: 1, // Ensures that the model stays behind other content
+          zIndex: 0, // Ensures that the model stays behind other content
         }}
       />
     </div>

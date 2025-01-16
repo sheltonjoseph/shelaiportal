@@ -10,14 +10,12 @@ import {
   Tech,
   Works,
   StarsCanvas,
+  LinkedInIcon
 } from "./components";
 // import ReactGA from "react-ga";
 import { useEffect } from "react";
 import { config } from "./constants/config";
 
-// const TRACKING_ID = "G-4Y0KTSMHWY";
-
-// ReactGA.initialize(TRACKING_ID);
 
 const App = () => {
   useEffect(() => {
@@ -29,11 +27,13 @@ const App = () => {
   return (
     <BrowserRouter>
       <div className="bg-primary relative z-0">
+      <LinkedInIcon />
         <div className="bg-hero-pattern bg-cover bg-center bg-no-repeat">
           <Navbar />
-          <div className="mt-0 sm:mt-0 md:mt-0 lg:mt-0 xl:mt-0 2xl:mt-4"> {/* Apply Margin */}
-        <Hero />
-      </div>
+          <div className="mt-0 sm:mt-0 md:mt-0 lg:mt-0 xl:mt-0 2xl:mt-4">
+
+            <Hero />
+          </div>
         </div>
         <div style={{ backgroundColor: "black" }}>
           <About />
@@ -41,7 +41,7 @@ const App = () => {
         {/* <Experience /> */}
         <Tech />
         <div style={{ backgroundColor: "black" }}>
-        <Works />
+          <Works />
         </div>
         <Feedbacks />
         <div style={{ backgroundColor: "black" }} className="relative z-0">
@@ -49,7 +49,7 @@ const App = () => {
           <StarsCanvas />
         </div>
       </div>
-    </BrowserRouter>
+  </BrowserRouter>
   );
 };
 
