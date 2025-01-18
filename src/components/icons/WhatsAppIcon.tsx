@@ -2,7 +2,7 @@
 
 const WhatsAppIcon = () => {
     const handleIconClick = () => {
-        window.open('https://wa.me/8838962516', '_blank');
+        window.open('https://wa.me/+918838962516', '_blank');
       };
       
    return (
