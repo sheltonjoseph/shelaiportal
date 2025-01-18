@@ -8,7 +8,7 @@ const LinkedInIcon = () => {
   return (
     <span
       className="[&>svg]:h-5 [&>svg]:w-5"
-      style={{ position: 'fixed', right: '10px', top: '300px', cursor: 'pointer' }}
+      style={{ position: 'fixed', right: '10px', top: '300px', cursor: 'pointer',  zIndex: 1000  }}
       onClick={handleIconClick}
     >
       <svg

@@ -10,7 +10,8 @@ import {
   Tech,
   Works,
   StarsCanvas,
-  LinkedInIcon
+  LinkedInIcon,
+  WhatsAppIcon
 } from "./components";
 // import ReactGA from "react-ga";
 import { useEffect } from "react";
@@ -28,11 +29,11 @@ const App = () => {
     <BrowserRouter>
       <div className="bg-primary relative z-0">
       <LinkedInIcon />
+      <WhatsAppIcon/>
         <div className="bg-hero-pattern bg-cover bg-center bg-no-repeat">
           <Navbar />
           <div className="mt-0 sm:mt-0 md:mt-0 lg:mt-0 xl:mt-0 2xl:mt-4">
-
-            <Hero />
+          <Hero />
           </div>
         </div>
         <div style={{ backgroundColor: "black" }}>
