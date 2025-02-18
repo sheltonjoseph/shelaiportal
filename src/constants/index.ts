@@ -175,6 +175,14 @@ const technologies: TTechnology[] = [
 // ];
 
 const testimonials: TTestimonial[] = [
+    {
+    testimonial:
+      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
+    name: "Deepthi",
+    designation: "Doctor",
+    company: "456 Enterprises",
+    image: "https://randomuser.me/api/portraits/women/6.jpg",
+  },
   {
     testimonial:
       "I thought it was impossible to make a website as beautiful as our product, but Shelly proved me wrong.",
@@ -191,21 +199,14 @@ const testimonials: TTestimonial[] = [
     company: "MC Stones",
     image: "https://randomuser.me/api/portraits/men/5.jpg",
   },
-  // {
-  //   testimonial:
-  //     "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-  //   name: "Lisa Wang",
-  //   designation: "CTO",
-  //   company: "456 Enterprises",
-  //   image: "https://randomuser.me/api/portraits/women/6.jpg",
-  // },
+
 ];
 
 const projects: TProject[] = [
   {
     name: "DeepDoc",
     description:
-      "A RAG-based Gen AI app for a college client using LangChain and a vector database in Python, with a React frontend. It allows students to query academic materials and get accurate, cited answers in a structured note-taking format",
+      "A RAG-based Gen AI product using LangChain and a vector database in Python, with a React frontend. It helps final-year MBBS students query academic materials across various subjects and get structured, cited answers with page references for better learning and revision.",
     tags: [
       {
         name: "RAG",
