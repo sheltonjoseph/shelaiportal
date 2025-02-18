@@ -26,6 +26,7 @@ import {
   msstones,
   threejs,
   upraising,
+  DeepDoc
 } from "../assets";
 
 export const navLinks: TNavLink[] = [
@@ -202,6 +203,27 @@ const testimonials: TTestimonial[] = [
 
 const projects: TProject[] = [
   {
+    name: "DeepDoc",
+    description:
+      "A RAG-based Gen AI app for a college client using LangChain and a vector database in Python, with a React frontend. It allows students to query academic materials and get accurate, cited answers in a structured note-taking format",
+    tags: [
+      {
+        name: "RAG",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Langchain",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Generative AI",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: DeepDoc,
+    sourceCodeLink: "https://deepdoc.netlify.app/",
+  },
+  {
     name: "upraising Communications",
     description: 
     "A marketing website for an outdoor advertising agency specializing in billboards and other advertising solutions. We handled the content creation, design, development, and deployment of the website using HTML, CSS, and JavaScript.",  
@@ -243,27 +265,7 @@ const projects: TProject[] = [
     image: msstones,
     sourceCodeLink: "https://mcstones.in/",
   },
-  // {
-  //   name: "Trip Guide",
-  //   description:
-  //     "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-  //   tags: [
-  //     {
-  //       name: "nextjs",
-  //       color: "blue-text-gradient",
-  //     },
-  //     {
-  //       name: "supabase",
-  //       color: "green-text-gradient",
-  //     },
-  //     {
-  //       name: "css",
-  //       color: "pink-text-gradient",
-  //     },
-  //   ],
-  //   image: tripguide,
-  //   sourceCodeLink: "https://github.com/",
-  // },
+ 
 ];
 
 export { services, technologies, testimonials, projects };

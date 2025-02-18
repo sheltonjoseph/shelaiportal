@@ -21,6 +21,8 @@ import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
 import upraising from "./upraising.png";
 import msstones from "./msstones.png";
+import DeepDoc from "./DeepDoc.png";
+
 
 
 export {
@@ -46,4 +48,5 @@ export {
   threejs,
   upraising,
   msstones,
+  DeepDoc
 };
