@@ -7,7 +7,6 @@ import {
   Feedbacks,
   Hero,
   Navbar,
-  Tech,
   Works,
   StarsCanvas,
   LinkedInIcon,
@@ -40,7 +39,6 @@ const App = () => {
           <About />
         </div>
         {/* <Experience /> */}
-        <Tech />
         <div style={{ backgroundColor: "black" }}>
           <Works />
         </div>
